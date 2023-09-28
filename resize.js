@@ -1,7 +1,15 @@
+//in the top of the same file it's used in
+
 const originalWidth = canvas.width;
 const originalHeight = canvas.height;
 var scaleX = 0;
 var scaleY = 0;
+
+//in the update loop
+
+resizeCanvasForWindowSize()
+
+//anywhere on the surface
 
 resizeCanvasForWindowSize() {
 
