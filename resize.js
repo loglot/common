@@ -1,5 +1,7 @@
 //in the top of the same file it's used in
 
+const canvas = document.getElementById("game_screen");
+
 const originalWidth = canvas.width;
 const originalHeight = canvas.height;
 var scaleX = 0;
