@@ -9,6 +9,7 @@ export class KeyManager {
     mouseY = 0;
     canvasShape = canvas.getBoundingClientRect()
     camera
+    mousePos
 
 
     constructor(Camera) {
@@ -24,6 +25,14 @@ export class KeyManager {
       document.addEventListener('keyup', (event) => {
         var code = event.code;
         this.setKeyPressed(code, false)
+      }, false);
+
+      document.addEventListener("click", (event) => {
+        this.game.hook.enabled = !this.game.hook.enabled
+        var rect = canvas.getBoundingClientRect()
+        this.mousePos = this.getMousePos(canvas, event);
+        this.mousePos.x = (((this.mousePos.x) / (rect.width)) * 1676) //- this.camX
+        this.mousePos.y = (((this.mousePos.y) / (rect.height)) * 918) //- this.camY
       }, false);
     }
 
